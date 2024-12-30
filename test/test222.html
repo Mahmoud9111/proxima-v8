@@ -1,0 +1,164 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartono Hotel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-white">
+    <!-- Hero Section -->
+    <section class="relative h-[55vh] min-h-[600px] max-w-7xl mx-auto rounded-3xl overflow-hidden">
+        <img 
+            src="4.jpg"
+            alt="Luxury seaside resort" 
+            class="absolute inset-0 w-full h-full object-cover"
+        >
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="relative z-10 flex flex-col justify-center h-full px-4 md:px-16">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                Unwind in a Dreamy<br>Seaside Haven
+            </h1>
+            <p class="text-lg md:text-xl text-white/90 max-w-2xl mb-8">
+                Indulge in the epitome of coastal living as you discover the breathtaking beauty and unparalleled tranquility of Cartono
+            </p>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section class="py-16 md:py-24 px-4 md:px-16">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 mb-16">
+                <div>
+                    <h2 class="text-sm uppercase tracking-wider text-orange-500 font-bold mb-4">Premium Facilities</h2>
+                    <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold">Exclusive Premium Facilities</h3>
+                </div>
+                <div class="flex items-center">
+                    <p class="text-gray-600">
+                        Our exclusive amenities include a luxurious swimming pool and breathtaking integrated views. Every corner is meticulously designed to create an exceptional ambiance
+                    </p>
+                </div>
+            </div>
+
+            <div class="relative">
+                <div class="overflow-x-auto scrollbar-hide snap-x snap-mandatory">
+                    <div class="flex gap-8 pb-8 w-max">
+                        <!-- Nature Pool Card -->
+                        <div class="group w-80 flex-shrink-0 snap-start">
+                            <div class="relative h-80 mb-6 overflow-hidden rounded-xl shadow-xl">
+                                <img 
+                                    src="e1.jpeg"
+                                    alt="Nature-Inspired Pool"
+                                    class="w-full h-full object-cover transition-transform group-hover:scale-105"
+                                >
+                            </div>
+                            <h4 class="text-2xl font-semibold mb-2">Nature-Inspired Pool</h4>
+                            <p class="text-gray-600">Serene Swimming Pool with a Touch of Paradise</p>
+                        </div>
+
+                        <!-- Tourist Area Card -->
+                        <div class="group w-80 flex-shrink-0 snap-start">
+                            <div class="relative h-80 mb-6 overflow-hidden rounded-xl shadow-xl">
+                                <img 
+                                    src="e2.jpeg"
+                                    alt="Integrated Tourist Area"
+                                    class="w-full h-full object-cover transition-transform group-hover:scale-105"
+                                >
+                            </div>
+                            <h4 class="text-2xl font-semibold mb-2">Integrated Tourist Area</h4>
+                            <p class="text-gray-600">Tourism integration is enhancing travel experiences</p>
+                        </div>
+
+                        <!-- Window Sunset Card -->
+                        <div class="group w-80 flex-shrink-0 snap-start">
+                            <div class="relative h-80 mb-6 overflow-hidden rounded-xl shadow-xl">
+                                <img 
+                                    src="e1.jpeg"
+                                    alt="Window Sunset"
+                                    class="w-full h-full object-cover transition-transform group-hover:scale-105"
+                                >
+                            </div>
+                            <h4 class="text-2xl font-semibold mb-2">Window Sunset</h4>
+                            <p class="text-gray-600">From the Room, Witness the Beauty of the World</p>
+                        </div>
+
+                        <!-- Luxury Spa Card -->
+                        <div class="group w-80 flex-shrink-0 snap-start">
+                            <div class="relative h-80 mb-6 overflow-hidden rounded-xl shadow-xl">
+                                <img 
+                                    src="e2.jpeg"
+                                    alt="Luxury Spa"
+                                    class="w-full h-full object-cover transition-transform group-hover:scale-105"
+                                >
+                            </div>
+                            <h4 class="text-2xl font-semibold mb-2">Luxury Spa</h4>
+                            <p class="text-gray-600">Indulge in ultimate relaxation and rejuvenation</p>
+                        </div>
+
+                        <!-- Gourmet Restaurant Card -->
+                        <div class="group w-80 flex-shrink-0 snap-start">
+                            <div class="relative h-80 mb-6 overflow-hidden rounded-xl shadow-xl">
+                                <img 
+                                    src="e1.jpeg"
+                                    alt="Gourmet Restaurant"
+                                    class="w-full h-full object-cover transition-transform group-hover:scale-105"
+                                >
+                            </div>
+                            <h4 class="text-2xl font-semibold mb-2">Gourmet Restaurant</h4>
+                            <p class="text-gray-600">Savor exquisite cuisine with breathtaking views</p>
+                        </div>
+
+                        <!-- Private Beach Card -->
+                        <div class="group w-80 flex-shrink-0 snap-start">
+                            <div class="relative h-80 mb-6 overflow-hidden rounded-xl shadow-xl">
+                                <img 
+                                    src="e2.jpeg"
+                                    alt="Private Beach"
+                                    class="w-full h-full object-cover transition-transform group-hover:scale-105"
+                                >
+                            </div>
+                            <h4 class="text-2xl font-semibold mb-2">Private Beach</h4>
+                            <p class="text-gray-600">Exclusive access to pristine sandy shores</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute top-1/2 -left-4 -translate-y-1/2">
+                    <button class="bg-white rounded-full p-2 shadow-md hover:bg-gray-100" onclick="scrollCards('left')">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="absolute top-1/2 -right-4 -translate-y-1/2">
+                    <button class="bg-white rounded-full p-2 shadow-md hover:bg-gray-100" onclick="scrollCards('right')">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function scrollCards(direction) {
+            const container = document.querySelector('.overflow-x-auto');
+            const scrollAmount = 320; // Adjust this value based on card width + gap
+            if (direction === 'left') {
+                container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            } else {
+                container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>

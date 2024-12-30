@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+        <!--smoth scrolling-->
+        <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
+        <!--GSAP-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+        <!--AOS-->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+            <!--email.js-->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+      emailjs.init("nowSj9JnTDWhSMmXI"); // استبدل YOUR_PUBLIC_KEY بمفتاحك من EmailJS
+    </script>
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/brain.css">
+
+    <title>Document</title>
+</head>
+<body class="">
+
+    <div class="p-3">
+        <!-- Section -->
+        <div class="bg-white flex flex-col items-center px-6 mt-56">
+          <!-- Section Title -->
+          <div class="text-center mb-10 max-w-3xl">
+            <h2 class="text-orange-500 text-3xl sm:text-4xl md:text-4xl font-bold">
+              In the heart of Silicon Valley.
+            </h2>
+            <p class="text-gray-400 text-base sm:text-base mt-2">
+              Just minutes from SFO, our flagship clinic sets a new standard for personalized care and comfort.
+            </p>
+          </div>
+        </div>
+      
+        <!-- Hero Section -->
+        <div class="p-4 relative bg-cover bg-center bg-white w-full max-w-[1400px] h-[500px] mx-auto my-3 px-6 sm:px-10 md:px-14 lg:px-20 flex items-center justify-center rounded-3xl"
+          style="background-image: url('4.jpg');">
+          <!-- Overlay -->
+          <div class="absolute inset-0 bg-black opacity-30 rounded-3xl"></div>
+      
+          <!-- Content -->
+          <div class="relative z-10 text-center text-white">
+            <h1 class="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">
+              Cost Efficiency and <span class="text-orange-500">Budget Control</span>
+            </h1>
+            <p class="text-base sm:text-lg mb-4 sm:mb-6">
+              Renting saves you the substantial upfront costs of purchasing equipment,
+               allowing you to allocate your budget toward other project needs.
+            </p>
+            <a href="#"
+              class="btn-hover-circle text-white border border-zinc-400 rounded-full px-4 py-3 text-lg transition duration-300 hover:backdrop-blur-md hover:bg-white hover:bg-opacity-30">
+              Request a demo
+              <span class="arrow-wrapper ml-5">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                  <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      
+        <!-- Cards Section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-[1400px] mx-auto my-2">
+          <!-- Left Card -->
+          <div class="relative h-[600px] bg-black text-white rounded-3xl overflow-hidden shadow-2xl">
+            <!-- Background Image -->
+            <img src="1.jpg" alt="Background" class="absolute inset-0 w-full h-full object-cover opacity-50">
+            <!-- Content -->
+            <div class="relative z-10 p-8 flex flex-col justify-between h-full">
+              <div class="text-left">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4"><span class="text-orange-500">Flexible Rental</span> Terms </h2>
+                <p class="text-lg sm:text-xl">
+                  Our flexible rental plans fit projects of any duration, with easy term adjustments to match your needs.
+                </p>
+              </div>
+              <div class="text-left">
+                <a href="#"
+                   class="btn-hover-circle text-white border border-zinc-400 rounded-full px-4 py-3 text-lg transition duration-300 hover:backdrop-blur-md hover:bg-white hover:bg-opacity-30">
+                  Discover
+                  <span class="arrow-wrapper ml-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                      <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+      
+<!-- Right Card - Reviews Carousel -->
+<div class="relative h-[600px] bg-gray-100 text-black rounded-3xl overflow-hidden shadow-2xl">
+    <div class="relative z-10 p-8 flex flex-col h-full" x-data="{ currentReview: 0 }" x-init="setInterval(() => { currentReview = (currentReview + 1) % 5 }, 5000)">
+        <!-- Reviews Container -->
+        <div class="space-y-6 h-full">
+          <template x-for="(review, index) in [
+            {
+              quote: 'Over the past 11 months, we have enabled our customers to improve their efficiency by +43%.',
+              author: 'Michael Chen',
+              role: 'Director of Operations, TechCorp'
+            },
+            {
+              quote: 'The equipment quality and service support have exceeded our expectations consistently.',
+              author: 'Sarah Johnson',
+              role: 'Project Manager, BuildRight Inc'
+            },
+            {
+              quote: 'Their flexible terms saved us significant costs while scaling our operations.',
+              author: 'David Martinez',
+              role: 'CEO, StartUp Solutions'
+            },
+            {
+              quote: 'Outstanding customer service and top-notch equipment maintenance.',
+              author: 'Emily Wong',
+              role: 'Facilities Manager, Innovation Labs'
+            },
+            {
+              quote: 'A game-changer for our project management and resource allocation.',
+              author: 'James Wilson',
+              role: 'Operations Director, Global Tech'
+            }
+          ]" :key="index">
+            <div 
+              x-show="currentReview === index" 
+              x-transition:enter="transition ease-out duration-500"
+              x-transition:enter-start="opacity-0 transform scale-90 translate-y-6"
+              x-transition:enter-end="opacity-100 transform scale-100 translate-y-0"
+
+              class="h-full flex flex-col">
+              <!-- Main Text at the Top Left -->
+              <blockquote class="text-3xl sm:text-4xl font-bold mb-4" x-text="review.quote"></blockquote>
+            </div>
+          </template>
+        </div>
+      
+        <!-- Static Section for Name and Role -->
+        <div class="absolute bottom-16 left-8">
+          <p class="text-xl font-semibold" x-text="[
+            'Michael Chen',
+            'Sarah Johnson',
+            'David Martinez',
+            'Emily Wong',
+            'James Wilson'
+          ][currentReview]"></p>
+          <p class="text-gray-400" x-text="[
+            'Director of Operations, TechCorp',
+            'Project Manager, BuildRight Inc',
+            'CEO, StartUp Solutions',
+            'Facilities Manager, Innovation Labs',
+            'Operations Director, Global Tech'
+          ][currentReview]"></p>
+        </div>
+      
+        <!-- Navigation Dots -->
+        <div class="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
+          <template x-for="(dot, index) in 5" :key="index">
+            <button 
+              @click="currentReview = index"
+              :class="{'w-5 bg-orange-500': currentReview === index, 'bg-gray-300': currentReview !== index}"
+              class="w-6 h-2 rounded-full transition-all duration-200">
+            </button>
+          </template>
+        </div>
+      </div>
+      
+      
+      <!-- Alpine.js for handling the carousel -->
+      <script src="//unpkg.com/alpinejs" defer></script>
+
+
+
+
+
+
+</body>
+</html>

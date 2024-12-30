@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain-Data-as-a-Service Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        .horizontal-container {
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            color: white;
+            background: 
+                linear-gradient(135deg, rgba(255, 153, 0, 0.9), rgba(255, 94, 0, 0.9)),
+                linear-gradient(135deg, rgba(50, 49, 49, 0.801), rgba(255, 255, 255, 0.8)), 
+                url('/.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .scroll-content {
+            padding-right: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .text-section {
+            flex: 0 0 20%;
+            padding: 5rem;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .text-section h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .text-section p {
+            font-size: 1.2rem;
+            color: #FFE4B5;
+            line-height: 1.6;
+        }
+
+        .text-section button {
+            margin-top: 1rem;
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(to right, #FF8C00, #FF4500);
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: bold;
+        }
+
+        .text-section button:hover {
+            background: linear-gradient(to right, #FF4500, #FF8C00);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(255, 165, 0, 0.3);
+        }
+
+        .card {
+            background: rgba(255, 165, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            width: 700px;
+            height: 600px;
+            box-shadow: 0 6px 30px rgba(255, 140, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(255, 140, 0, 0.4);
+        }
+
+        .card img {
+            width: 600px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 1rem;
+        }
+
+        .card h2 {
+            padding: 1.5rem;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+            background: linear-gradient(to right, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .card p {
+            padding: 1.5rem;
+            font-size: 1.1rem;
+            color: #FFE4B5;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .horizontal-container {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+            }
+
+            .scroll-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .text-section {
+                padding: 1.5rem;
+                text-align: center;
+                height: auto;
+            }
+
+            .text-section h1 {
+                font-size: 1.5rem;
+            }
+
+            .text-section p {
+                font-size: 0.9rem;
+            }
+
+            .text-section button {
+                margin: 1rem auto 0;
+            }
+
+            .card {
+                width: 90%;
+                height: auto;
+            }
+
+            .card img {
+                width: 100%;
+                height: auto;
+            }
+
+            .card h2 {
+                font-size: 1.5rem;
+            }
+
+            .card p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-orange-400 to-red-500">
+    <div class="horizontal-container">
+        <div class="scroll-content">
+            <!-- Text Section -->
+            <div class="text-section">
+                <h1 class="text-4xl font-bold mb-4">Introducing The First Ever Brain-Data-as-a-Service Platform</h1>
+                <p class="mb-6">
+                    Brain-Data-as-a-Service supercharges the value of brain data, building a shared big data library
+                    that can be leveraged for the value of all participants, while keeping research data anonymous and private.
+                </p>
+                <button class="transform hover:scale-105 transition-transform duration-300">
+                    Get in Touch
+                </button>
+            </div>
+
+            <!-- Cards Section -->
+            <div class="card hover:shadow-2xl transition-shadow duration-300">
+                <img src="1.jpg" alt="Brain Sensei" class="rounded-lg">
+                <h2 class="text-3xl font-semibold">The Brain Sensei™</h2>
+                <p>Proprietary hardware: automated process non-invasively and accurately collects brain data with the click of a button.</p>
+            </div>
+            <div class="card hover:shadow-2xl transition-shadow duration-300">
+                <img src="2.jpg" alt="Brain Cloud" class="rounded-lg">
+                <h2 class="text-3xl font-semibold">Brain Cloud</h2>
+                <p>Brain data is de-noised, standardized, and automatically tagged by machine learning models.</p>
+            </div>
+            <div class="card hover:shadow-2xl transition-shadow duration-300">
+                <img src="3.jpg" alt="Brain Analytics" class="rounded-lg">
+                <h2 class="text-3xl font-semibold">Brain Analytics</h2>
+                <p>Actionable insights for neuroscience research, accelerating innovation and discovery.</p>
+            </div>
+            <div class="card hover:shadow-2xl transition-shadow duration-300">
+                <img src="4.jpg" alt="Neural Tools" class="rounded-lg">
+                <h2 class="text-3xl font-semibold">Neural Tools</h2>
+                <p>Unlocking the potential of brain data for research and clinical applications worldwide.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        
+        function initScrollTrigger() {
+            const scrollContent = document.querySelector(".scroll-content");
+            const scrollWidth = scrollContent.scrollWidth;
+            const windowWidth = window.innerWidth;
+            
+            // Reset existing ScrollTriggers
+            ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+            
+            if (windowWidth > 768) {
+                // Enable horizontal scrolling for larger screens
+                gsap.to(".scroll-content", {
+                    x: () => -(scrollWidth - windowWidth),
+                    ease: "power1.inOut",
+                    scrollTrigger: {
+                        trigger: ".horizontal-container",
+                        start: "top top",
+                        end: () => "+=" + (scrollWidth - windowWidth),
+                        scrub: 1.5,
+                        pin: true,
+                    },
+                });
+            } else {
+                // For smaller screens, ensure vertical scrolling
+                gsap.set(".scroll-content", { x: 0 }); // Reset horizontal position
+                document.querySelector(".horizontal-container").style.height = "auto"; // Ensure full vertical height
+            }
+        }
+        
+        // Initialize on page load
+        initScrollTrigger();
+        
+        // Reinitialize on window resize
+        window.addEventListener("resize", initScrollTrigger);
+    </script>
+</body>
+</html>

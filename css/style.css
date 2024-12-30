@@ -1,0 +1,258 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "designer";
+    font-weight: 700;
+    src: url("/fonts/Designer.woff2") format("woff2"), url("/fonts/Designer.woff") format("woff");
+  }
+}
+
+
+#facts{
+  font-family: "designer";
+}
+
+#proximah1{
+  font-family: "designer";
+}
+
+::selection{
+  background-color: rgb(255, 119, 0);
+  color: white;
+}
+
+.blurred-section {
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  /* Animation for mobile dropdown */
+  .dropdown-enter {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  .dropdown-active {
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+  }
+
+
+
+  /* QA Custom font size for heading QA*/
+.section-heading {
+  font-size: 2.75rem;
+}
+
+
+        /* Hide content by default */
+        .content {
+          display: none;
+      }
+      /* Show content when active */
+      .active .content {
+          display: block;
+      }
+
+
+/*horizantal scrolling*/
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.horizontal-container {
+display: flex;
+height: 100vh;
+align-items: center;
+color: white;
+background: 
+linear-gradient(135deg, rgb(18, 58, 83), rgb(12, 15, 33)),
+url('/Frame 56 (2).png');
+background-size: cover; /* Ensures the image covers the entire container */
+background-position: center; /* Centers the image */
+background-repeat: no-repeat; /* Prevents tiling */
+background-attachment: fixed; /* Creates a parallax effect for scrolling */
+}
+
+
+.scroll-content { 
+  padding-right: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.text-section {
+  flex: 0 0 20%;
+  padding: 5rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-section h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.text-section p {
+  font-size: 1.2rem;
+  color: #eeeeee;
+  line-height: 1.6;
+}
+
+.text-section button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(to right, #FF8C00, #FF4500);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.text-section button:hover {
+  background: linear-gradient(to right, #FF4500, #FF8C00);
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  width: 700px;
+  height: 600px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card img {
+  width: 600px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.card h2 {
+  padding: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+
+
+}
+
+.card p {
+  padding: 1.5rem;
+  font-size: 1.1rem;
+  color: #E5E7EB;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .horizontal-container {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem 0;
+  }
+
+  .scroll-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-section {
+    padding: 1.5rem;
+    text-align: center;
+    height: auto;
+  }
+
+  .text-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .text-section p {
+    font-size: 0.9rem;
+  }
+
+  .text-section button {
+    margin: 1rem auto 0;
+  }
+
+  .card {
+    width: 90%;
+    height: auto;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .card h2 {
+    font-size: 1.5rem;
+  }
+
+  .card p {
+    font-size: 1rem;
+  }
+}
+
+
+
+    /* Add hover circle specifically for the arrow */
+    .btn-hover-circle {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .btn-hover-circle .arrow-wrapper {
+      position: relative;
+    }
+
+    .btn-hover-circle .arrow-wrapper::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 3rem; /* Circle size */
+      height: 3rem;
+      background-color: #f97316; /* Tailwind's orange-500 */
+      border-radius: 50%;
+      transform: translate(-50%, -50%) scale(0); /* Start hidden */
+      opacity: 0;
+      z-index: -100; /* Place behind the arrow */
+      transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+    }
+
+    .btn-hover-circle:hover .arrow-wrapper::after {
+      transform: translate(-50%, -50%) scale(1); /* Circle expands */
+      opacity: 1; /* Circle becomes visible */
+    }
+
+
+/*last section*/
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+
